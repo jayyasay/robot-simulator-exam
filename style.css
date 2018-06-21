@@ -1,0 +1,25 @@
+label {
+    font-weight: bold;
+}
+section.float-left{
+	float: left;
+	margin: 0px;
+	height: auto;
+}
+section.float-right{
+	float: right;
+	padding: 0px;
+}
+#command {
+    font-size: 1em;
+}
+#report {
+    height: 20px;
+    color: #0892d0;
+}
+#report span {
+    padding-right: 10px;
+}
+#report #error {
+    color: #FF0000;
+}

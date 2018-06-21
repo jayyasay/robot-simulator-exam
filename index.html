@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script type="text/javascript" src="javascript.js"></script>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <header>
+         <h1>
+         ROBOT SIMULATOR</h2>
+      </header>
+      <main>
+         <section class="float-left">
+            <p>The application can read commands in following format (case insensitive):</p>
+            <ul>
+               <li>PLACE X,Y,F</li>
+               <li>MOVE</li>
+               <li>LEFT</li>
+               <li>RIGHT</li>
+               <li>REPORT</li>
+            </ul>
+            <div class="content">
+               <h4>Current Status:</h4>
+               <p id="report"></p>
+               <button id="restart">Restart</button>
+            </div>
+            <div class="input-area">
+               <label for="command">Enter Command:</label>
+               <input type="text" id="command" onfocusout="inputView.processCommand(this.value)" onkeydown="if (event.keyCode == 13) inputView.processCommand(this.value);" autofocus>
+            </div>
+         </section>
+         <section class="float-right">
+            <canvas id="c" width="600" height="600"></canvas>
+         </section>
+      </main>
+</html>
