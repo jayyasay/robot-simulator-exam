@@ -1,16 +1,25 @@
+main {
+	font-family: arial;
+}
 label {
     font-weight: bold;
 }
 section.float-left{
 	float: left;
 	margin: 0px;
-	height: auto;
+	padding: 30px;
+	border: 1px solid #000
 }
 section.float-right{
 	float: right;
 	padding: 0px;
 }
+canvas {
+	margin-top:-50px;
+	padding-left: -50px;
+}
 #command {
+	margin-top: 20px;
     font-size: 1em;
 }
 #report {
