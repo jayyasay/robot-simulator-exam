@@ -3,7 +3,7 @@ var model = {
     init: {
         x: 0,
         y: 0,
-        f: "north"
+        f: "North"
     }
 };
 
@@ -60,7 +60,7 @@ var controller = {
             };
 
         switch (currentRobot.f) {
-            case "north":
+            case "North":
                 newY = currentRobot.y + 1;
                 if (canvasView.validateBound(newY, "maxY")) {
                     this.clearOriginalRobot();
@@ -70,7 +70,7 @@ var controller = {
                     canvasView.renderRobot();
                 }
                 break;
-            case "south":
+            case "South":
                 newY = currentRobot.y - 1;
                 if (canvasView.validateBound(newY, "maxY")) {
                     this.clearOriginalRobot();
@@ -79,7 +79,7 @@ var controller = {
                     canvasView.renderRobot();
                 }
                 break;
-            case "east":
+            case "East":
                 newX = currentRobot.x + 1;
                 if (canvasView.validateBound(newX, "maxX")) {
                     this.clearOriginalRobot();
@@ -88,7 +88,7 @@ var controller = {
                     canvasView.renderRobot();
                 }
                 break;
-            case "west":
+            case "West":
                 newX = currentRobot.x - 1;
                 if (canvasView.validateBound(newX, "maxX")) {
                     this.clearOriginalRobot();
@@ -209,7 +209,7 @@ var canvasView = {
         this.context = this.canvas.getContext("2d");
         this.renderCanvas();
 
-        this.robotFacing = ['north', 'east', 'south', 'west']; // clockwise
+        this.robotFacing = ['North', 'East', 'South', 'West']; // clockwise
         this.robotSize = 25; // is the arrow size actually
         this.renderRobot();
 
@@ -275,22 +275,22 @@ var canvasView = {
         var path = new Path2D();
         this.context.beginPath();
         switch (robot.f) {
-            case "north":
+            case "North":
                 path.moveTo(robotAxisX, robotAxisY - this.robotSize);
                 path.lineTo(robotAxisX - this.robotSize, robotAxisY);
                 path.lineTo(robotAxisX + this.robotSize, robotAxisY);
                 break;
-            case "south":
+            case "South":
                 path.moveTo(robotAxisX, robotAxisY + this.robotSize);
                 path.lineTo(robotAxisX - this.robotSize, robotAxisY);
                 path.lineTo(robotAxisX + this.robotSize, robotAxisY);
                 break;
-            case "east":
+            case "East":
                 path.moveTo(robotAxisX + this.robotSize, robotAxisY);
                 path.lineTo(robotAxisX, robotAxisY - this.robotSize);
                 path.lineTo(robotAxisX, robotAxisY + this.robotSize);
                 break;
-            case "west":
+            case "West":
                 path.moveTo(robotAxisX - this.robotSize, robotAxisY);
                 path.lineTo(robotAxisX, robotAxisY - this.robotSize);
                 path.lineTo(robotAxisX, robotAxisY + this.robotSize);

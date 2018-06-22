@@ -19,7 +19,7 @@ To get the application, just clone a repo, then `cd` its directory and you are r
 
 ```
 $ git clone git@github.com:jayyasay/robot-simulator-exam.git
-$ cd toy-robot-simulator
+$ cd robot-simulator-exam
 ```
 
 ### Operations and commands

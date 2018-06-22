@@ -5,6 +5,7 @@ label {
     font-weight: bold;
 }
 section.float-left{
+	width: 40%;
 	float: left;
 	margin: 0px;
 	padding: 30px;
@@ -17,6 +18,14 @@ section.float-right{
 canvas {
 	margin-top:-50px;
 	padding-left: -50px;
+}
+.content {
+	margin-top: 20px;
+	padding: 30px;
+	background: #EEEEEE;
+}
+#restart {
+	margin-top: 20px;
 }
 #command {
 	margin-top: 20px;
